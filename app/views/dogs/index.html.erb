@@ -1,0 +1,4 @@
+<h1>All Dog's</h1>
+<% @dogs.each do |dog|%><br/>
+<%=link_to dog.name, dog_path(dog)%>
+<%end%>
