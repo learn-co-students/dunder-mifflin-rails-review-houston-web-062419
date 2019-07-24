@@ -9,9 +9,15 @@
 <%= f.text_field :title %>
 <%= f.label :office %>
 <%= f.text_field :office %>
-<%= f.label :dog_id %>
-<%= f.text_field :dog_id %>
 <%= f.label :img_url %>
 <%= f.text_field :img_url %>
+<%= f.label :dog_id %>
+<%= f.collection_select :dog_id, Dog.all, :id, :name %><br>
 <%= f.submit %>
 <% end %>
+
+<% if flash[:errors] %>
+        <% flash[:errors].each do |f| %>
+                <%=f%>
+        <%end%>
+<%end%>
