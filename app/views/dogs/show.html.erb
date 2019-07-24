@@ -1,0 +1,18 @@
+<h1>Name: <%=@dog.name%></h1>
+Breed: <%=@dog.breed%><br/>
+Age: <%=@dog.age%><br/>
+
+<h2>Owners:</h2>
+<%@owners.each do |o|%>
+<%=link_to o.first_name + " " + o.last_name , employee_path(o)%><br/>
+<%end%>
+
+
+
+
+
+
+
+
+
+
