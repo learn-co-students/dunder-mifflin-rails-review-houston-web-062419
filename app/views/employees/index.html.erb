@@ -1,0 +1,3 @@
+<%@employees.each do |d|%>
+	<%=link_to d.first_name + " " + d.last_name, employee_path(d)%> <br>
+<%end%>
